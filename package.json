@@ -1,0 +1,22 @@
+{
+  "name": "utsubot",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "dircord",
+    "slack"
+  ],
+  "license": "MIT",
+  "author": "P-Chan",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@slack/webhook": "^5.0.3",
+    "discord.js": "^12.2.0"
+  },
+  "devDependencies": {
+    "@p-chan/prettier-config": "^2.0.0"
+  }
+}
