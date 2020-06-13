@@ -1,3 +1,4 @@
+const dayjs = require('dayjs')
 const Discord = require('discord.js')
 const { IncomingWebhook } = require('@slack/webhook')
 const client = new Discord.Client()
@@ -28,13 +29,29 @@ client.on('message', (message) => {
 client.on('voiceStateUpdate', (oldMember, newMember) => {
   if (oldMember.channelID == undefined && newMember.channelID !== undefined) {
     webhook.send({
-      text: `*${newMember.member.user.username}* が :loud_sound: *${newMember.channel.name}* に参加しました`,
+      attachments: [
+        {
+          color: 'good',
+          author_icon: newMember.member.user.avatarURL().replace('webp', 'png'),
+          author_name: `${newMember.member.user.username}#${newMember.member.user.discriminator}`,
+          title: `:loud_sound: ${newMember.channel.name} に参加しました`,
+          ts: dayjs().unix(),
+        },
+      ],
     })
   }
 
   if (oldMember.channelID !== undefined && newMember.channelID == undefined) {
     webhook.send({
-      text: `*${oldMember.member.user.username}* が :loud_sound: *${oldMember.channel.name}* から離脱しました`,
+      attachments: [
+        {
+          color: 'danger',
+          author_icon: oldMember.member.user.avatarURL().replace('webp', 'png'),
+          author_name: `${oldMember.member.user.username}#${oldMember.member.user.discriminator}`,
+          title: `:loud_sound: ${oldMember.channel.name} から離脱しました`,
+          ts: dayjs().unix(),
+        },
+      ],
     })
   }
 })
