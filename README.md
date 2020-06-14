@@ -14,4 +14,4 @@ $ DISCORD_BOT_TOKEN="xxx" SLACK_WEBHOOK_URL="xxx" node index.js
   <img src="icon.png" width="128" height="128" alt="icon">
 </p>
 
-Drawn by [@daisan_me](https://github.com/daisan-me)
+Drawn by [@daisan-me](https://github.com/daisan-me)
