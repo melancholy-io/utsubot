@@ -31,6 +31,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     webhook.send({
       attachments: [
         {
+          fallback: `${newMember.member.user.username} が :loud_sound: ${newMember.channel.name} に参加しました`,
           color: 'good',
           author_icon: newMember.member.user.avatarURL().replace('webp', 'png'),
           author_name: `${newMember.member.user.username}#${newMember.member.user.discriminator}`,
@@ -45,6 +46,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     webhook.send({
       attachments: [
         {
+          fallback: `${oldMember.member.user.username} が :loud_sound: ${oldMember.channel.name} から離脱しました`,
           color: 'danger',
           author_icon: oldMember.member.user.avatarURL().replace('webp', 'png'),
           author_name: `${oldMember.member.user.username}#${oldMember.member.user.discriminator}`,
