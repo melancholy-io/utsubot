@@ -1,6 +1,6 @@
 # utsubot
 
-utsubot は、Discord のボイスチャンネルの入退室を Slack に通知する bot です。
+utsubot は、Discord のボイスチャンネルの入退室を Slack に通知する Bot です。
 
 ## Usage
 

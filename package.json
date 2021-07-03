@@ -1,7 +1,7 @@
 {
   "name": "utsubot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord のボイスチャンネルの入退室を Slack に通知する bot",
   "keywords": [
     "dircord",
     "slack"
