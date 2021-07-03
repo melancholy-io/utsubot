@@ -1,11 +1,22 @@
 # utsubot
 
-utsubot は、Discord 通話の入退室を Slack に通知する bot です。
+utsubot は、Discord のボイスチャンネルの入退室を Slack に通知する bot です。
 
 ## Usage
 
-```bash
-$ DISCORD_BOT_TOKEN="xxx" SLACK_WEBHOOK_URL="xxx" node index.js
+### macOS / Linux
+
+```sh
+$ DISCORD_BOT_TOKEN="XXX" SLACK_WEBHOOK_URL="XXX" node index.js
+```
+
+### Docker
+
+```sh
+$ touch .env
+$ echo -e "DISCORD_BOT_TOKEN=\"XXX\"" >> .env
+$ echo -e "SLACK_WEBHOOK_URL=\"XXX\"" >> .env
+$ docker-compose up -d
 ```
 
 ## Icon
