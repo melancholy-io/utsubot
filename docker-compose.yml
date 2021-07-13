@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: utsubot
     env_file:
       - .env
     restart: always
